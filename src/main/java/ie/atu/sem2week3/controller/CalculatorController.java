@@ -19,7 +19,7 @@ public class CalculatorController {
 
     @GetMapping("/add")
     public ResponseEntity<Integer> add(@RequestParam int a, @RequestParam int b) {
-        int result = a + b;
+        int result = calculatorService.add(a, b);
         return ResponseEntity.ok(result);
     }
 
